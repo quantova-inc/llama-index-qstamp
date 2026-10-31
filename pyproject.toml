@@ -1,0 +1,27 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "llama-index-qstamp"
+version = "0.1.0"
+description = "Post quantum on chain provenance for LlamaIndex pipeline and agent events"
+readme = "README.md"
+requires-python = ">=3.9"
+license = "Apache-2.0 OR MIT"
+authors = [{ name = "Quantova Inc", email = "Quantovaorg@gmail.com" }]
+keywords = ["llama-index", "llamaindex", "provenance", "post-quantum", "qstamp", "attestation", "audit"]
+dependencies = ["llama-index-core>=0.12.0"]
+
+[project.optional-dependencies]
+test = ["pytest>=8", "pytest-asyncio>=0.23"]
+
+[project.urls]
+Homepage = "https://qstamp.org"
+Source = "https://github.com/quantova-inc/llama-index-qstamp"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+asyncio_mode = "auto"
